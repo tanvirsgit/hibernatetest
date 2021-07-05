@@ -12,6 +12,7 @@ public class Main {
 
         //CourseDAO courseDAO = context.getBean(CourseDAO.class);
        // CourseRepo courseRepo = context.getBean(CourseRepo.class);
+        PersonDAO personDAO = context.getBean(PersonDAO.class);
 
         //System.out.println(courseDAO.toString());
         Course course = new Course();
@@ -28,5 +29,11 @@ public class Main {
         System.out.println(courseRepo.findById(12).toString());
 
         courseRepo.findAll().forEach(c-> System.out.println(c.getTitle()));*/
+
+        Person person = new Person();
+        person.setName("Hero");
+        person.setAddress("Antarctica");
+        personDAO.storePerson(person);
+
     }
 }

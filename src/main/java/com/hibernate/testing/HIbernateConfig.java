@@ -49,6 +49,11 @@ public class HIbernateConfig {
         return flyway;
     }
 
+    @Bean
+    public PersonDAO personDAO(){
+        return new PersonDAO(localSessionFactoryBean().getObject());
+    }
+
    /* @Bean
     @DependsOn("flyway")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(){
