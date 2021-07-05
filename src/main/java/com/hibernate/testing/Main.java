@@ -10,7 +10,7 @@ public class Main {
     public static void main(String args[]){
         AnnotationConfigApplicationContext context= new AnnotationConfigApplicationContext(HIbernateConfig.class);
 
-        CourseDAO courseDAO = context.getBean(CourseDAO.class);
+        //CourseDAO courseDAO = context.getBean(CourseDAO.class);
        // CourseRepo courseRepo = context.getBean(CourseRepo.class);
 
         //System.out.println(courseDAO.toString());
@@ -20,8 +20,8 @@ public class Main {
         course.setEndDate(new GregorianCalendar(2021,7,2).getTime());
         course.setFee(1000);
 
-        courseDAO.store(course);
-        course = courseDAO.findById(12);
+       // courseDAO.store(course);
+       // course = courseDAO.findById(12);
         /*System.out.println(course.toString());
 
         courseRepo.save(course);
